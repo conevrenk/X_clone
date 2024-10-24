@@ -1,4 +1,9 @@
+import { API } from "./api.js";
+import { setLocal } from "./helper.js";
 import { authEle } from "./ui.js";
+
+//! API CLASININ BİR ÖRNEĞİ ALINDI
+const api = new API();
 
 // regex:regex belirli şartları kontrol etmek için sorgudur
 
@@ -23,7 +28,7 @@ const renderWarns = (nameWarning, passWarning) => {
   }
 };
 
-authEle.loginForm.addEventListener("submit", (e) => {
+authEle.loginForm.addEventListener("submit", async (e) => {
   // form gönderildiğinde sayfa yenilenmesi iptal edilir
   e.preventDefault();
   // formun içerisindeki verilere erişme
@@ -53,11 +58,15 @@ authEle.loginForm.addEventListener("submit", (e) => {
     passWarning = null;
   }
 
-    renderWarns(nameWarning, passWarning);
-    
-    if (!nameWarning && !passWarning) {
-        // eğer hiç hata yoksa form gönder
-        // beni anasayfaya yönlendir
-        window.location = "/";
-    }
+  renderWarns(nameWarning, passWarning);
+
+  if (!nameWarning && !passWarning) {
+    // Api dan kullanıcının adı ile bu kullanıcını verilerini al
+    const userData = await api.getUser(name);
+    // kullanıcı verilerini localstorage a set et
+    setLocal("user", userData);
+    // eğer hiç hata yoksa form gönder
+    // beni anasayfaya yönlendir
+    window.location = "/";
+  }
 });

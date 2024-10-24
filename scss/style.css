@@ -67,6 +67,42 @@ button {
   -o-border-radius: 5px;
 }
 
+.news {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 50px;
+}
+
+.news form {
+  background-color: rgb(40, 40, 40);
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  color: rgb(183, 181, 181);
+}
+.news form input {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgb(183, 181, 181);
+}
+
+.trends {
+  background-color: rgb(40, 40, 40);
+  padding: 20px;
+  list-style: none;
+  min-width: 250px;
+  border-radius: 10px;
+}
+.trends li {
+  padding: 10px;
+  border-bottom: 1px solid rgb(90, 90, 90);
+}
+
 nav a {
   text-decoration: none;
   color: white;
@@ -79,8 +115,12 @@ nav a {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  font-family: "Poppins" tablet();
-  font-family-grid-template-columns: 1fr 3fr;
+  font-family: "Poppins", sans-serif;
+}
+@media (max-width: 1000px) {
+  .feed {
+    grid-template-columns: 1fr 3fr;
+  }
 }
 @media (min-width: 1000px) {
   .feed {
@@ -201,4 +241,104 @@ nav a {
   .user-info p {
     display: none;
   }
+}
+
+main {
+  border: 1px solid rgb(50, 50, 50);
+  padding: 10px;
+  overflow: auto;
+  height: 100vh;
+}
+main header {
+  border-bottom: 1px solid rgb(70, 70, 70);
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+main #post-tweets {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid rgb(50, 50, 50);
+  padding: 20px;
+}
+main #post-tweets img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+main #post-tweets .input-area {
+  width: 100%;
+}
+main #post-tweets .input-area input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: black;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+main #post-tweets .input-area .buttons {
+  display: flex;
+  justify-content: end;
+}
+main #post-tweets .input-area .buttons button {
+  background-color: #0e619b;
+  color: white;
+  padding: 10px;
+  border-radius: 60px;
+}
+main #post-tweets .input-area .buttons button:hover {
+  background-color: rgba(0, 98, 155, 0.608);
+}
+
+.tweets-area .tweet {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  border-bottom: 1px solid rgb(28, 28, 28);
+  transition: all 0.5s;
+}
+.tweets-area .tweet:hover {
+  background-color: rgb(28, 28, 28);
+}
+.tweets-area .tweet .user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.tweets-area .body {
+  width: 100%;
+  margin-top: 10px;
+}
+.tweets-area .body .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tweets-area .body .info {
+  display: flex;
+  gap: 10px;
+}
+.tweets-area .body .info p {
+  color: gray;
+}
+.tweets-area .body .content img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tweets-area .body .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.tweets-area .body .buttons button {
+  background: none;
+  color: rgb(136, 136, 136);
+}
+.tweets-area .body .buttons button:hover {
+  background-color: rgba(236, 236, 236, 0.247);
+  border-radius: 40px;
 }/*# sourceMappingURL=style.css.map */

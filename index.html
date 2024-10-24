@@ -20,6 +20,7 @@
     />
   </head>
   <body class="feed">
+    <!-- SOL KISIM -->
     <aside class="left-bar">
       <nav>
         <img src="./images/x-logo .png" alt="logo" />
@@ -74,32 +75,47 @@
       </form>
       <!-- tweet alanı -->
       <div class="tweets-area">
-      <div class="tweet">
-        <img src="./images/x-logo .png" alt="" class="tweet-img"/>
-        <div class="body">
-          <div class="user">
-            <div class="info">
-              <h6>bedirhan evrenk</h6>
-              <p>@bedirhan</p>
-              <p>3 saat önce</p>
+        <!-- twwet -->
+        <div class="tweet">
+          <!-- User Image -->
+          <img src="./images/x-logo .png" alt="" class="user-img" />
+          <!-- tweet body -->
+          <div class="body">
+            <div class="user">
+              <div class="info">
+                <h6>bedirhan evrenk</h6>
+                <p>@bedirhan</p>
+                <p>3 saat önce</p>
+              </div>
+              <i class="bi bi-three-dots"></i>
             </div>
-            <i class="bi bi-three-dots"></i>
-          </div>
-          <div class="user-content">
-            <p>Tweet Content</p>
-            <img src="./images/x-logo .png" alt="" />
-          </div>
-          <div class="buttons">
-            <button><i class="bi bi-chat"></i><span>44</span></button>
-            <button><i class="bi bi-recycle"></i><span>69</span></button>
-            <button><i class="bi bi-heart"></i><span>100</span></button>
-            <button><i class="bi bi-bookmark"></i><span>54</span></button>
+            <div class="content">
+              <p>Tweet Content</p>
+              <img src="./images/x-logo .png" alt="" />
+            </div>
+            <div class="buttons">
+              <button><i class="bi bi-chat"></i><span>44</span></button>
+              <button><i class="bi bi-recycle"></i><span>69</span></button>
+              <button><i class="bi bi-heart"></i><span>100</span></button>
+              <button><i class="bi bi-bookmark"></i><span>54</span></button>
+            </div>
           </div>
         </div>
       </div>
-      </div>
     </main>
-    <aside class="news"></aside>
-    <script src="main.js" type="module"></script>
+    <aside class="news">
+      <form>
+        <i class="bi bi-search"></i>
+        <input type="search" placeholder="Ara" id="search-input"/>
+      </form>
+      <!-- trends kısmı -->
+      <div class="trends">
+        <h3>Haberler</h3>
+        <li>Haber</li>
+        <li>haber</li>
+        <li>haber</li>
+      </div>
+    </aside>
+    <script src="./scripts/main.js" type="module"></script>
   </body>
 </html>
